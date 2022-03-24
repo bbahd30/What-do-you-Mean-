@@ -1,0 +1,9 @@
+body
+{
+    color: blue;
+    background-color: linear-gradient(transform(45deg purple white));
+}
+div[invisible]
+{
+    display: none;
+}

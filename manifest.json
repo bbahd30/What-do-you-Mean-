@@ -1,0 +1,12 @@
+{
+    "name": "What do you Mean?", 
+    "version": "0.0.1",
+    "description":"Tells the meaning of the words you search",
+    "manifest_version": 2,
+
+    "browser_action":
+    {
+        "default_popup": "/HTML/index.html"
+    },
+    "permission": ["activeTab"]
+}
