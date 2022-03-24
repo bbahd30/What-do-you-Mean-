@@ -1,6 +1,6 @@
 const input = document.querySelector(".searchedWord");
 const meaning = document.querySelector(".meaning span");
-const info = document.querySelector(".info span");
+const info = document.querySelector(".info");
 const example = document.querySelector(".example span");
 const syno = document.querySelector(".syno span");
 const pronunciation = document.querySelector("#pronunciation");
@@ -22,7 +22,22 @@ function f (data, word)
 
         meaning.innerText = data[0].meanings[0].definitions[0].definition;
         document.querySelector(".info p").innerText = data[0].word;
-        info.innerText = `${data[0].meanings[0].partOfSpeech} ${data[0].phonetics[0].text}`;
+        if ( data[0].meanings[0].partOfSpeech==undefined)
+        {
+            info.querySelector(".type").style.display = "none";
+        }
+        else
+        {
+            info.querySelector(".type").innerText = `${data[0].meanings[0].partOfSpeech}`;
+        }
+        if ( data[0].phonetics[0].text==undefined)
+        {
+            info.querySelector(".pronun").style.display = "none";
+        }
+        else
+        {
+            info.querySelector(".pronun").innerText = `${data[0].phonetics[0].text}`;;
+        }
         // example.innerText = data[0].meanings[0].definitions[0].example;
         // syno.innerText = data[0].meanings[0].definitions[0].example;
         
@@ -45,9 +60,12 @@ function f (data, word)
                 syno.innerText+= syn;
             }
         }
+       
         pronounce = () =>
         {
-            
+            const audio = new Audio();
+            audio.src = data[0].phonetics[0].audio;
+            audio.play();
         }
         pronunciation.addEventListener("click", pronounce);
 
