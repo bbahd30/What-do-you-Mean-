@@ -38,15 +38,7 @@ body
     background-color: white;
     justify-content: center;
 }
-/* .container::before
-{
-    content: "";
-     position: absolute;
-    width: 2000px;
-    height: 2000px;
-    border-radius: 75%;
-    z-index: -1000;
-} */
+
 .container2
 {
     display: flex;
@@ -81,7 +73,6 @@ input::placeholder
 {
     position: relative;
     top: 25px;
-    border: .2px solid black;
     display: flex;
     flex-flow: column wrap;
     padding: 5px 5px;
@@ -111,7 +102,13 @@ input
     cursor: pointer;
     padding: 5px 5px;
 }
-.type
+.error
+{
+    position: relative;
+    top: 30px;
+    bottom: 30px;
+    color: var(--lavender);
+}
 
 .info
 {

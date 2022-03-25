@@ -12,11 +12,15 @@ function f (data, word)
     if (data.title)
     {
         var notPresent = document.createElement("div");
-        notPresent.innerText = `Unable to find the meaning of ${input.value}. Try searching another word.`;
+        notPresent.classList.add("error");
+        notPresent.setAttribute("id","noMatch");
+        notPresent.innerText = `Can't find the meaning of ${input.value}. Try searching another word.`;
         container1.appendChild(notPresent);
+        document.querySelector(".container2").setAttribute("invisible","true");
     }
     else
     {
+        
         document.querySelector(".container2").removeAttribute("invisible");
         console.log(data);
 
