@@ -1,9 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;1,600&display=swap');
+
+:root
+{
+    --seablue: #17A2B8;
+    --violet: #551a8b;
+    --lavender: #8a96da;
+}
+*{
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+h1
+{
+    font-size: 25px;
+}
 body
 {
-    color: blue;
-    background-color: linear-gradient(transform(45deg purple white));
+    background-image: linear-gradient(13deg, white,var(--seablue));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    min-height: 900px;
+    min-height: 100vh;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.container
+{
+    margin: 20px 20px;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 50px 30px;
+    border-radius: 20px;
+    background-color: white;
+    justify-content: center;
+}
+/* .container::before
+{
+    content: "";
+     position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 75%;
+    z-index: -1000;
+} */
+.container2
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#search
+{
+    position: relative;
+    top: 16px;
+    transform: translateX(-19px);
 }
 div[invisible]
 {
     display: none;
+}
+*::selection
+{
+    background-color: var(--seablue);
+    color: white;
+}
+body,input, button
+{
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 10px 10px;
+}
+input::placeholder
+{
+    color: var(--lavender);
+}
+.info, .meaning, .syno
+{
+    position: relative;
+    top: 25px;
+    border: .2px solid black;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5px 5px;
+}
+p
+{
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 5px 5px;
+    color: var(--seablue);
+}
+span
+{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 5px;
+    color: var(--violet);
+}
+input
+{
+    position: relative;
+    color: var(--violet);
+    top: 15px;
+    width: 200px;
+    font-size: 19px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+.type
+
+.info
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+#pronunciation
+{
+    display: inline-block;
+    width: 10px;
+    padding: 5px 0 5px 160px;
 }

@@ -55,7 +55,7 @@ function f (data, word)
                 }
                 else
                 {
-                    var syn = `${data[0].meanings[0].synonyms[j]},etc`;
+                    var syn = `${data[0].meanings[0].synonyms[j]}, etc`;
                 }
                 syno.innerText+= syn;
             }
@@ -91,7 +91,6 @@ input.addEventListener("keyup", (event) =>
 {
     if (event.key==="Enter" && input.value !=="")
     {
-        alert(`call ${input.value}`);
         meaningGiver(input.value);
     }
 });

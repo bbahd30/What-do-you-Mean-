@@ -10,30 +10,36 @@
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-    <div class="container1">
-        <h1>What do you Mean?</h1>
-        <input type="text" placeholder="Enter the word" class="searchedWord" >
-        <i class="fas fa-search"></i>
-        <!-- *********** -->
-    </div>
-
-    <div class="container2" invisible="true">
-        <div class="info">
-                <p></p>
-                <span class="type"></span><span class="pronun"></span>
-                <i class="fas fa-volume-up" id="pronunciation"></i>
+    <div class="container">
+        <div class="container1">
+            <h1>What do you Mean?</h1>
+            <input type="text" placeholder="Enter the word" class="searchedWord" >
+            <!-- <i class="fas fa-search" id="search"></i> -->
+            <!-- *********** -->
         </div>
-        <div class="meaning">
-            <p>Meaning</p>
-            <span></span>
-        </div>
-        <!-- <div class="example">
-            <p>Example</p>
-            <span>He vloomed.</span>
-        </div> -->
-        <div class="syno">
-            <p>Synonyms</p>
-            <span></span>
+    
+        <div class="container2" invisible="true">
+            <div class="info">
+                    <div>
+                        <p></p>
+                        <span class="type"></span><span class="pronun"></span>
+                    </div>
+                    <div>
+                        <i class="fas fa-volume-up" id="pronunciation"></i>
+                    </div>
+            </div>
+            <div class="meaning">
+                <p>Meaning</p>
+                <span></span>
+            </div>
+            <!-- <div class="example">
+                <p>Example</p>
+                <span>He vloomed.</span>
+            </div> -->
+            <div class="syno">
+                <p>Synonyms</p>
+                <span></span>
+            </div>
         </div>
     </div>
     <script src="../JS/script.js"></script>
